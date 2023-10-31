@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=018d5e79-8c3f-43c0-9db6-ee33435ec5a1&lang=ru_RU" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      ymaps.ready(init);
+      function init(){
+        var myMap = new ymaps.Map("map", {
+          center: [55.76, 37.64],
+          zoom: 7
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <div id="map" style="width: 600px; height: 400px"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
